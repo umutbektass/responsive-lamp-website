@@ -73,10 +73,13 @@ faqItems.forEach(item => {
     // 2.Select each button click
     faqHeader.addEventListener('click', () => {
         // 7. Select the current faq-open class
-        const open = document.querySelector('.faq-open');
+        const openItem = document.querySelector('.faq-open');
         
         // 5. Call the toggleItem function
         toggleItem(item)
+        if(openItem && openItem !==item){
+            toggleItem(openItem)
+        }
     }
     )
 })
